@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-duck: #0a5c6e;
+  --color-duck-dark: #073e4b;
+  --color-ink: #0a0a0a;
+  --color-paper: #ffffff;
+  --color-paper-soft: #f4f5f4;
+  --color-muted: rgba(10, 10, 10, 0.55);
+  --color-muted-ink: rgba(255, 255, 255, 0.58);
+  --color-line: rgba(10, 10, 10, 0.11);
+  --color-line-ink: rgba(255, 255, 255, 0.16);
+  
+  --font-serif: var(--font-fraunces), serif;
+  --font-sans: var(--font-inter), sans-serif;
+}
+
+@layer base {
+  :root {
+    --duck: #0a5c6e;
+    --duck-dark: #073e4b;
+    --ink: #0a0a0a;
+    --paper: #ffffff;
+    --paper-soft: #f4f5f4;
+    --muted: rgba(10, 10, 10, 0.55);
+    --muted-on-ink: rgba(255, 255, 255, 0.58);
+    --line: rgba(10, 10, 10, 0.11);
+    --line-on-ink: rgba(255, 255, 255, 0.16);
+    --container: 1360px;
+    --gutter: clamp(20px, 4vw, 64px);
+    --ease: cubic-bezier(.22, .68, 0, 1);
+  }
+
+  body {
+    background-color: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .wrap {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+  }
+  
+  .ink-bg {
+    background-color: var(--ink);
+    color: var(--paper);
+  }
+  
+  .display {
+    font-family: var(--font-serif);
+    font-weight: 440;
+    line-height: 0.98;
+    letter-spacing: -0.01em;
+  }
+  
+  .eyebrow {
+    font-size: 11.5px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--duck);
+    font-weight: 600;
+  }
+
+  .ink-bg .eyebrow {
+    color: #ffffff;
+  }
+}
