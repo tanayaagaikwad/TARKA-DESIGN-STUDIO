@@ -1,7 +1,7 @@
 import React from 'react';
 import SectionHeading from '@/components/SectionHeading';
 import Link from 'next/link';
-import MagneticButton from '@/components/MagneticButton';
+import { MagneticLink } from '@/components/MagneticButton';
 import { notFound } from 'next/navigation';
 
 interface ProjectPageProps {
@@ -44,7 +44,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                     <div className="md:col-span-8">
                         <h3 className="font-serif text-2xl mb-6 text-[var(--duck-dark)]">The Challenge</h3>
                         <p className="text-[15px] leading-relaxed text-[var(--muted)] mb-12">
-                            This space serves as a structural placeholder for real case study narratives. Tarka's approach to project documentation involves detailing the specific problems faced during product conception and the technical decisions made to solve them effectively.
+                            This space serves as a structural placeholder for real case study narratives. Tarka&apos;s approach to project documentation involves detailing the specific problems faced during product conception and the technical decisions made to solve them effectively.
                         </p>
 
                         <h3 className="font-serif text-2xl mb-6 text-[var(--duck-dark)]">The Approach</h3>
@@ -64,9 +64,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                 {/* Next Project Nav */}
                 <div className="mt-32 pt-16 border-t border-[var(--line)] flex justify-between items-center">
                     <Link href="/work" className="text-[14px] text-[var(--muted)] hover:text-[var(--duck)] transition-colors">&larr; Back to all work</Link>
-                    <Link href="/work/next-project" passHref legacyBehavior>
-                        <MagneticButton variant="secondary">Next Project</MagneticButton>
-                    </Link>
+                    <MagneticLink href="/work/next-project" variant="secondary">Next Project</MagneticLink>
                 </div>
             </div>
         </div>

@@ -5,6 +5,8 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 import CustomCursor from '@/components/CustomCursor';
+import Loader from '@/components/Loader';
+import ScrollProgress from '@/components/ScrollProgress';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', weight: ['400', '500', '600'] });
 const fraunces = Fraunces({ subsets: ['latin'], variable: '--font-fraunces', axes: ['opsz'] });
@@ -23,6 +25,8 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth bg-[var(--paper)]">
       <body className={`${inter.variable} ${fraunces.variable} antialiased flex flex-col min-h-screen text-[var(--ink)]`}>
         <CustomCursor />
+        <Loader />
+        <ScrollProgress />
         <Navbar />
         <main className="flex-grow flex flex-col">
           {children}

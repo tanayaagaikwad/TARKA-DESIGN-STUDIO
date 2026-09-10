@@ -1,6 +1,7 @@
 import React from 'react';
 import SectionHeading from '@/components/SectionHeading';
 import Link from 'next/link';
+import Reveal from '@/components/Reveal';
 
 const projects = [
     { id: 'project-one', title: 'Project Title', category: 'Product Design', year: '2026', gridClass: 'md:col-span-8 md:aspect-[16/10]', aspect: 'aspect-[16/10]' },
@@ -14,14 +15,15 @@ const projects = [
 export default function WorkPage() {
     return (
         <div className="py-24 max-w-[var(--container)] mx-auto px-[var(--gutter)] text-[var(--ink)]">
-            <SectionHeading eyebrow="The Work" title="What we've built." className="mb-0" />
+            <Reveal><SectionHeading eyebrow="The Work" title="What we've built." className="mb-0" /></Reveal>
             <p className="mt-6 text-sm text-[var(--muted)] max-w-[50ch] italic">
                 Editorial frames shown structurally — real Tarka case studies to be inserted here.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-12 gap-5 mt-16">
-                {projects.map((project) => (
-                    <Link href={`/work/${project.id}`} key={project.id} className={`block relative rounded-sm overflow-hidden bg-[var(--ink)] group ${project.gridClass} ${project.aspect}`}>
+                {projects.map((project, index) => (
+                    <Reveal key={project.id} delay={index * 70} className={project.gridClass}>
+                    <Link data-cursor-view href={`/work/${project.id}`} className={`project-card block relative rounded-sm overflow-hidden bg-[var(--ink)] group ${project.aspect}`}>
                         <div className="w-full h-full bg-[var(--duck-dark)] flex items-center justify-center border border-white/5 opacity-80 group-hover:opacity-100 transition-opacity duration-500">
                             <span className="text-white/30 text-xs">Project Visual</span>
                         </div>
@@ -31,7 +33,7 @@ export default function WorkPage() {
                             <h3 className="font-serif text-[clamp(18px,2vw,24px)]">{project.title}</h3>
                             <p className="text-[12px] text-white/70 mt-1">{project.category} &middot; {project.year}</p>
                         </div>
-                    </Link>
+                    </Link></Reveal>
                 ))}
             </div>
         </div>

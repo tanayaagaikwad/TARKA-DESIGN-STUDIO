@@ -16,7 +16,7 @@ export default function TeamPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mt-16 items-end">
                     <div className="lg:col-span-2 flex flex-col justify-end h-full min-h-[300px] p-8 border border-[var(--line)] rounded-sm bg-white">
                         <p className="font-serif italic text-2xl mb-8 leading-snug text-[var(--duck-dark)]">
-                            "We don't hire just to scale. We hire builders who care about the final pixel as much as the first conversation."
+                            &ldquo;We don&apos;t hire just to scale. We hire builders who care about the final pixel as much as the first conversation.&rdquo;
                         </p>
                     </div>
 

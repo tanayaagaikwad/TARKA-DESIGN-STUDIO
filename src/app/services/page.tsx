@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import SectionHeading from '@/components/SectionHeading';
 import ServiceCard from '@/components/ServiceCard';
+import Reveal from '@/components/Reveal';
 
 const services = [
     { num: "01", name: "Product Design", desc: "The flows, logic and decisions inside a product — from first sketch to something people trust with their time.", href: "/work" },
@@ -18,11 +19,11 @@ export default function ServicesPage() {
 
     return (
         <div className="wrap py-24 pb-32 min-h-[80vh]">
-            <SectionHeading eyebrow="What we build" title="Six disciplines. One way of thinking." />
+            <Reveal><SectionHeading eyebrow="What we build" title="Six disciplines. One way of thinking." /></Reveal>
 
             <div className="border-t border-[var(--line)] mt-16">
                 {services.map((service, index) => (
-                    <ServiceCard
+                    <Reveal key={service.num} delay={index * 65}><ServiceCard
                         key={service.num}
                         num={service.num}
                         name={service.name}
@@ -36,7 +37,7 @@ export default function ServicesPage() {
                                 <div className="absolute inset-0 bg-gradient-to-tr from-[var(--duck)]/10 to-transparent pointer-events-none mix-blend-screen" />
                             </div>
                         }
-                    />
+                    /></Reveal>
                 ))}
             </div>
         </div>
