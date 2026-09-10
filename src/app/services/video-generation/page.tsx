@@ -1,7 +1,6 @@
 import React from 'react';
 import SectionHeading from '@/components/SectionHeading';
-import MagneticButton from '@/components/MagneticButton';
-import Link from 'next/link';
+import { MagneticLink } from '@/components/MagneticButton';
 
 export default function VideoGenerationPage() {
     return (
@@ -37,9 +36,7 @@ export default function VideoGenerationPage() {
                 </div>
 
                 <div className="mt-16 flex justify-center text-center">
-                    <Link href="/quote" passHref legacyBehavior>
-                        <MagneticButton variant="outline" className="border-white/20">Discuss an Experiment</MagneticButton>
-                    </Link>
+                    <MagneticLink href="/quote" variant="outline" className="border-white/20">Discuss an Experiment</MagneticLink>
                 </div>
             </div>
         </div>

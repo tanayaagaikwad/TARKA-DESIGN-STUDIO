@@ -21,7 +21,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 
                 <div className="mt-16 space-y-8 text-[15.5px] leading-relaxed text-[var(--muted)]">
                     <p className="text-[clamp(18px,2vw,24px)] leading-relaxed font-serif text-[var(--duck-dark)]">
-                        A thought isn't much until someone makes it real. This is where we document how we make things real.
+                        A thought isn&apos;t much until someone makes it real. This is where we document how we make things real.
                     </p>
                     <p>
                         Editorial content placeholder for the article. In the production CMS, this content will be pulled dynamically based on the slug.
@@ -35,7 +35,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                     </div>
 
                     <p>
-                        Tarka exists to close that gap. We don't just supply mockups or hand off vague directions. We engineer the experiences we design. This means understanding the medium deeply—knowing when to push the browser to its limits, and when restraint is the more sophisticated choice.
+                        Tarka exists to close that gap. We don&apos;t just supply mockups or hand off vague directions. We engineer the experiences we design. This means understanding the medium deeply—knowing when to push the browser to its limits, and when restraint is the more sophisticated choice.
                     </p>
                 </div>
             </div>

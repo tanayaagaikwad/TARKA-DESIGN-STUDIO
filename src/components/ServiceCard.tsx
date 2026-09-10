@@ -14,7 +14,7 @@ interface ServiceCardProps {
 
 export default function ServiceCard({ num, name, desc, href, isOpen, onClick, visual }: ServiceCardProps) {
     return (
-        <div className={`border-b border-[var(--line)] overflow-hidden ${isOpen ? 'open' : ''}`}>
+        <div className={`service-card border-b border-[var(--line)] overflow-hidden ${isOpen ? 'open' : ''}`}>
             <button
                 onClick={onClick}
                 className="w-full flex items-center justify-between gap-6 py-6 text-left transition-transform active:scale-[0.99] group"
